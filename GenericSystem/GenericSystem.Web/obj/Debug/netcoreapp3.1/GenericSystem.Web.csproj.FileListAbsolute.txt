@@ -66,7 +66,6 @@ C:\dev\GenericSystem\GenericSystem\GenericSystem.Web\obj\Debug\netcoreapp3.1\Gen
 C:\dev\GenericSystem\GenericSystem\GenericSystem.Web\obj\Debug\netcoreapp3.1\GenericSystem.Web.TagHelpers.output.cache
 C:\dev\GenericSystem\GenericSystem\GenericSystem.Web\obj\Debug\netcoreapp3.1\GenericSystem.Web.RazorCoreGenerate.cache
 C:\dev\GenericSystem\GenericSystem\GenericSystem.Web\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
-C:\dev\GenericSystem\GenericSystem\GenericSystem.Web\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
 C:\dev\GenericSystem\GenericSystem\GenericSystem.Web\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
 C:\dev\GenericSystem\GenericSystem\GenericSystem.Web\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\dev\GenericSystem\GenericSystem\GenericSystem.Web\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
