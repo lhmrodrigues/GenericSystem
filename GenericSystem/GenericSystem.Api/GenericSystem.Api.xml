@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GenericSystem.Api</name>
+    </assembly>
+    <members>
+        <member name="M:GenericSystem.Api.Controllers.V1.UserController.Get">
+            <summary>
+            Listar Usuarios
+            </summary>
+            <remarks>
+            # Listar apontamentos
+            
+            Lista usuários da base de dados.
+            </remarks>
+            <response code="200">Retorna uma lista de usuários</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.UserController.Get(System.Guid)">
+            <summary>
+            Consultar usuários
+            </summary>
+            <remarks>
+            # Consultar usuários
+            
+            Consulta um usuários na base de dados.
+            </remarks>
+            <param name="id">Id do usuários</param>        
+            <response code="200">Retorna um usuários</response>
+            <response code="404">usuários não encontrado</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.UserController.Post(GenericSystem.Infra.CrossCutting.Util.ViewModels.UserViewModel)">
+             <summary>
+             Incluir usuários
+             </summary>
+             <remarks>
+             # Incluir usuários
+             
+             Inclui um usuários na base de dados.
+             
+             # Sample request:
+            
+                 POST /usuários
+                 {
+                    "Nome": "nome do usuários",
+                    "Data Nascimento": "2019-09-21T15:56:00.503Z",
+                    "CPF": "123.456.789-00",
+                 }
+             </remarks>
+             <param name="obj">usuários</param>        
+             <response code="201">usuários cadastrado com sucesso</response>
+             <response code="400">Objetos não preenchidos corretamente</response>
+             <response code="409">Guid informado já consta na base de dados</response>
+             <response code="401">Acesso não autorizado</response>
+             <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.UserController.Put(System.Guid,GenericSystem.Infra.CrossCutting.Util.ViewModels.UserViewModel)">
+             <summary>
+             Alterar usuários
+             </summary>
+             <remarks>
+             # Alterar usuários
+             
+             Altera um usuários na base de dados.
+             
+             # Sample request:
+            
+                 PUT /usuários
+                 {
+                    "Nome": "nome do usuários",
+                    "Data Nascimento": "2019-09-21T15:56:00.503Z",
+                    "CPF": "123.456.789-00",
+                 }
+             </remarks>
+             <param name="id">Id do usuários</param>        
+             <param name="obj">usuários</param>        
+             <response code="204">usuários alterado com sucesso</response>
+             <response code="400">ID informado não é válido</response>
+             <response code="401">Acesso não autorizado</response>
+             <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.UserController.Delete(System.Guid)">
+            <summary>
+            Remover usuários
+            </summary>
+            <remarks>
+            # Remover usuários
+            
+            Remove um usuários da base de dados.
+            </remarks>
+            <param name="id">Id do usuários</param>        
+            <response code="204">usuários removido com sucesso</response>
+            <response code="404">usuários não encontrado</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+    </members>
+</doc>

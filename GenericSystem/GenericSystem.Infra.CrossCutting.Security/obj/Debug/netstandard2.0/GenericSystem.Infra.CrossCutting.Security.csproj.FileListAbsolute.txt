@@ -1,0 +1,9 @@
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Security\bin\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Security.deps.json
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Security\bin\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Security.dll
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Security\obj\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Security.AssemblyInfoInputs.cache
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Security\obj\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Security.AssemblyInfo.cs
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Security\bin\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Security.pdb
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Security\obj\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Security.csprojAssemblyReference.cache
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Security\obj\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Security.csproj.CoreCompileInputs.cache
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Security\obj\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Security.dll
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Security\obj\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Security.pdb

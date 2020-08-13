@@ -1,0 +1,16 @@
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\bin\Debug\netstandard2.0\GenericSystem.Application.deps.json
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\bin\Debug\netstandard2.0\GenericSystem.Application.dll
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\obj\Debug\netstandard2.0\GenericSystem.Application.csprojAssemblyReference.cache
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\obj\Debug\netstandard2.0\GenericSystem.Application.AssemblyInfoInputs.cache
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\obj\Debug\netstandard2.0\GenericSystem.Application.AssemblyInfo.cs
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\bin\Debug\netstandard2.0\GenericSystem.Domain.dll
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\bin\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Communication.dll
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\bin\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Util.dll
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\bin\Debug\netstandard2.0\GenericSystem.Application.pdb
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\bin\Debug\netstandard2.0\GenericSystem.Domain.pdb
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\bin\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Communication.pdb
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\bin\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Util.pdb
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\obj\Debug\netstandard2.0\GenericSystem.Application.csproj.CoreCompileInputs.cache
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\obj\Debug\netstandard2.0\GenericSystem.Application.csproj.CopyComplete
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\obj\Debug\netstandard2.0\GenericSystem.Application.dll
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Application\obj\Debug\netstandard2.0\GenericSystem.Application.pdb

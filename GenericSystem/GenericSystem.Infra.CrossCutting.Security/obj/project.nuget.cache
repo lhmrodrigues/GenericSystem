@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ww/kjARP+rV/5Yvgp9RU6RV48ODg9ULZPoY4kNz50Ra25FTgAchE3kwhGRZiVhzkLx8MTmn8IOhQGHNsVswCfA==",
+  "success": true,
+  "projectFilePath": "C:\\dev\\GenericSystem\\GenericSystem\\GenericSystem.Infra.CrossCutting.Security\\GenericSystem.Infra.CrossCutting.Security.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\luis_\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.7\\microsoft.extensions.dependencyinjection.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\luis_\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

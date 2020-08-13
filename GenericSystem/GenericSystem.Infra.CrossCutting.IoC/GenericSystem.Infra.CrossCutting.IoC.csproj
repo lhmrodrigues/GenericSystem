@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GenericSystem.Application\GenericSystem.Application.csproj" />
+    <ProjectReference Include="..\GenericSystem.Domain\GenericSystem.Domain.csproj" />
+    <ProjectReference Include="..\GenericSystem.Infra.CrossCutting.Communication\GenericSystem.Infra.CrossCutting.Communication.csproj" />
+    <ProjectReference Include="..\GenericSystem.Infra.CrossCutting.Util\GenericSystem.Infra.CrossCutting.Util.csproj" />
+    <ProjectReference Include="..\GenericSystem.Infra.Data\GenericSystem.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
