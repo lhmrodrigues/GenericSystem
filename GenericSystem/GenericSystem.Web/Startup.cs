@@ -42,7 +42,6 @@ namespace GenericSystem.Web
             .AddCookie(x =>
             {
                 x.LoginPath = new PathString("/Login");
-                x.AccessDeniedPath = new PathString("/Negado");
             });
 
             services.AddMiniProfiler(options =>
@@ -60,6 +59,8 @@ namespace GenericSystem.Web
                 // (defaults to true, and connection opening/closing is tracked)
                 options.TrackConnectionOpenClose = true;
             });
+
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
             services.AddRazorPages().AddRazorPagesOptions(options =>
             {

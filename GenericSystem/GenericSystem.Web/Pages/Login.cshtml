@@ -1,8 +1,90 @@
 ﻿@page
 @model GenericSystem.Web.Pages.LoginModel
 @{
+    Layout = null;
     ViewData["Title"] = "Login";
 }
 
-<h1>Login</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/iCheck/custom.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="~/lib/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet" />
 
+    <script src="~/lib/iCheck/icheck.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<style>
+    body {
+        background-image: url('resources/background.jpg');
+        background-size: cover;
+        background-position: center center;
+        margin-top: 50px;
+    }
+
+    .login {
+        display: flex;
+        margin-top:-40px;
+        align-items: center;
+    }
+
+        .login .titulo {
+            font-size: 40px;
+            font-family: 'Noto Sans JP', sans-serif;
+            margin-bottom: 25px;
+        }
+
+        .login div {
+            text-align: center;
+        }
+
+    .centralizer {
+        text-align: center;
+    }
+
+    input {
+        margin-top: 20px;
+        
+    }
+
+    button {
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <div class="offset-1 col-10">
+        <div class="card">
+            <div class="card-body" style="margin-top:60px">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="~/resources/imageicon.png" width="700px" height="550px"/>
+                    </div>
+                    <div class="col-md-6 login">
+                        <div class="row centralizer">
+                            <div class="col-md-12">
+                                <div class="titulo">Sign In</div>
+                            </div>
+                            <div class="offset-2 col-md-12">
+                                <input type="text" placeholder="Username" class="form-control col-md-8"/>
+                            </div>
+                            <div class="offset-2 col-md-12">
+                                <input type="password" placeholder="Password" class="form-control col-md-8" />
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-info col-md-6 "><b>Login</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

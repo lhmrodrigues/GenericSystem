@@ -1,0 +1,12 @@
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Communication\bin\Release\netstandard2.0\GenericSystem.Infra.CrossCutting.Communication.deps.json
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Communication\bin\Release\netstandard2.0\GenericSystem.Infra.CrossCutting.Communication.dll
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Communication\bin\Release\netstandard2.0\GenericSystem.Infra.CrossCutting.Communication.pdb
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Communication\bin\Release\netstandard2.0\GenericSystem.Infra.CrossCutting.Util.dll
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Communication\bin\Release\netstandard2.0\GenericSystem.Infra.CrossCutting.Util.pdb
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Communication\obj\Release\netstandard2.0\GenericSystem.Infra.CrossCutting.Communication.csprojAssemblyReference.cache
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Communication\obj\Release\netstandard2.0\GenericSystem.Infra.CrossCutting.Communication.AssemblyInfoInputs.cache
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Communication\obj\Release\netstandard2.0\GenericSystem.Infra.CrossCutting.Communication.AssemblyInfo.cs
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Communication\obj\Release\netstandard2.0\GenericSystem.Infra.CrossCutting.Communication.csproj.CoreCompileInputs.cache
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Communication\obj\Release\netstandard2.0\GenericSystem.Infra.CrossCutting.Communication.csproj.CopyComplete
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Communication\obj\Release\netstandard2.0\GenericSystem.Infra.CrossCutting.Communication.dll
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Infra.CrossCutting.Communication\obj\Release\netstandard2.0\GenericSystem.Infra.CrossCutting.Communication.pdb
