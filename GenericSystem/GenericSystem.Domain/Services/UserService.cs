@@ -16,5 +16,12 @@ namespace GenericSystem.Domain.Services
         {
             _userRepository = userRepository;
         }
+
+        public User Authenticate(string username, string password)
+        {
+            User user = _userRepository.Authenticate(username, password);
+
+            return user;
+        }
     }
 }

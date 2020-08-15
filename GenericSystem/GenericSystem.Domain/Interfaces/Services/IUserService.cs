@@ -7,5 +7,7 @@ namespace GenericSystem.Domain.Interfaces.Services
 {
     public interface IUserService : ICrudService<User>
     {
+        User Authenticate(string username, string password);
+
     }
 }

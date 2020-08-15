@@ -7,9 +7,18 @@ namespace GenericSystem.Infra.CrossCutting.Util.ViewModels
 {
     public class UserViewModel : BaseViewModel
     {
+        [Display(Name = "Username")]
+        [Required(ErrorMessage = "Necessário informar o {0}.")]
+        [MaxLength(15, ErrorMessage = "{0} pode conter no máximo {1} caractéres.")]
+        public string Username { get; set; }
+
+        [Display(Name = "Senha")]
+        [Required(ErrorMessage = "Necessário informar o {0}.")]
+        public string Password { get; set; }
+
         [Display(Name = "Nome")]
         [Required(ErrorMessage = "Necessário informar o {0}.")]
-        public string Nome { get; set; }
+        public string Name { get; set; }
 
         [Display(Name = "CPF")]
         [Required(ErrorMessage = "Necessário informar o {0}.")]

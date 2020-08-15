@@ -83,7 +83,7 @@ namespace GenericSystem.Infra.CrossCutting.Util
         {
             get
             {
-                string value = _configuration.GetSection("AppSettings")["SqlConnection"];
+                string value = _configuration.GetSection("AppSettings")["UrlGenericSystemApi"];
 
                 if (value != null)
                 {

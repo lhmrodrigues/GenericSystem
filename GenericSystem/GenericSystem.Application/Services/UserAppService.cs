@@ -18,5 +18,11 @@ namespace GenericSystem.Application.Services
         {
             _userService = userService;
         }
+
+        public UserViewModel Authenticate(string userame, string password)
+        {
+            return _mapper.Map<UserViewModel>(_userService.Authenticate(userame, password));
+
+        }
     }
 }

@@ -1,8 +1,10 @@
 ﻿using GenericSystem.Domain.Entities;
 using GenericSystem.Domain.Interfaces.Repositories;
 using GenericSystem.Infra.Data.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace GenericSystem.Infra.Data.Repository
@@ -13,6 +15,13 @@ namespace GenericSystem.Infra.Data.Repository
            : base(context)
         {
 
+        }
+        public User Authenticate(string username, string password)
+        {
+            IQueryable<User> obj = _dbSet.AsNoTracking();
+
+            return obj
+                .FirstOrDefault(x => x.Username == username && x.Password == password);
         }
     }
 }

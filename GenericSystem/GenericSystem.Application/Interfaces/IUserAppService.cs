@@ -7,5 +7,7 @@ namespace GenericSystem.Application.Interfaces
 {
     public interface IUserAppService : ICrudAppService<UserViewModel>
     {
+        UserViewModel Authenticate(string user, string password);
+
     }
 }

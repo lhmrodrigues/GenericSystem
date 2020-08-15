@@ -212,6 +212,40 @@ namespace GenericSystem.Api.Controllers.V1
             return NoContent();
         }
 
+        /// <summary>
+        /// Autentica usuário
+        /// </summary>
+        /// <remarks>
+        /// # Autentica usuário
+        /// 
+        /// Autentica um usuário na base de dados.
+        /// </remarks>
+        /// <param name="id">Id do usuários</param>        
+        /// <response code="200">Retorna um usuários</response>
+        /// <response code="404">usuários não encontrado</response>
+        /// <response code="500">Erro no processamento da requisição</response>
+        [HttpGet("Auth")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<UserViewModel> Auth(string username, string password)
+        {
+            try
+            {
+                UserViewModel user = _userAppService.Authenticate(username, password);
+
+                if (user == null)
+                {
+                    return NotFound();
+                }                
+
+                return Ok(new { user });
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
         private bool ObjExists(Guid id)
         {
             return _userAppService.Get(id) != null;

@@ -20,7 +20,17 @@ namespace GenericSystem.Infra.Data.Mappings
                 .HasColumnType("uniqueidentifier")
                 .IsRequired();
 
-            builder.Property(c => c.Nome)
+            builder.Property(c => c.Username)
+               .HasColumnName("USER_USERNAME")
+               .HasColumnType("varchar(15)")
+               .IsRequired();
+
+            builder.Property(c => c.Password)
+               .HasColumnName("USER_PASSWORD")
+               .HasColumnType("varchar(MAX)")
+               .IsRequired();
+
+            builder.Property(c => c.Name)
                .HasColumnName("USER_NAME")
                .HasColumnType("varchar(MAX)")
                .IsRequired();

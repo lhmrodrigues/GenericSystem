@@ -31,7 +31,7 @@
 
     .login {
         display: flex;
-        margin-top:-40px;
+        margin-top: -40px;
         align-items: center;
     }
 
@@ -51,11 +51,22 @@
 
     input {
         margin-top: 20px;
-        
     }
 
     button {
         margin-top: 20px;
+    }
+
+    .fb {
+        background-color: #3B5998;
+        color: white;
+        font-size:12px;
+    }
+
+    .google {
+        background-color: #dd4b39;
+        color: white;
+        font-size: 12px;
     }
 </style>
 <body>
@@ -64,22 +75,33 @@
             <div class="card-body" style="margin-top:60px">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="~/resources/imageicon.png" width="700px" height="550px"/>
+                        <img class="col-md-12" src="~/resources/imageicon.png" />
                     </div>
                     <div class="col-md-6 login">
-                        <div class="row centralizer">
+                        <div class="row">
                             <div class="col-md-12">
-                                <div class="titulo">Sign In</div>
+                                <img class="col-md-2" src="~/resources/userImage.png" />
                             </div>
-                            <div class="offset-2 col-md-12">
-                                <input type="text" placeholder="Username" class="form-control col-md-8"/>
-                            </div>
-                            <div class="offset-2 col-md-12">
-                                <input type="password" placeholder="Password" class="form-control col-md-8" />
-                            </div>
-                            <div class="col-md-12">
-                                <button type="submit" class="btn btn-info col-md-6 "><b>Login</b></button>
-                            </div>
+                            <form asp-page="Login" method="post" class="form-horizontal col-md-12" role="form">
+                                <div class="col-md-12">
+                                    <div class="titulo">Sign In</div>
+                                </div>
+                                <div class="offset-2 col-md-12">
+                                    <input type="text" placeholder="Username" asp-for="AuthenticationViewModel.Username" class="form-control col-md-8" />
+                                    @Html.ValidationMessageFor(m => m.AuthenticationViewModel.Username, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="offset-2 col-md-12">
+                                    <input type="password" placeholder="Password" asp-for="AuthenticationViewModel.Password" class="form-control col-md-8" />
+                                    @Html.ValidationMessageFor(m => m.AuthenticationViewModel.Password, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-info col-md-6 "><b>Login</b></button>
+                                    <div class="col-md-12" style="margin-top:20px">
+                                        <a href="#" class="fb btn col-md-3">Login with Facebook</a>
+                                        <a href="#" class="google btn col-md-3">Login with Google+</a>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

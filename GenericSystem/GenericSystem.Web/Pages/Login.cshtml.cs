@@ -12,16 +12,16 @@ namespace GenericSystem.Web.Pages
     public class LoginModel : PageBase
     {
         private readonly IUserApiService _userApiService;
-        
+
         [BindProperty]
-        public UserViewModel UserViewModel { get; set; }
+        public AuthenticationViewModel AuthenticationViewModel { get; set; }
 
         public LoginModel(IUserApiService userApiService)
         {
             _userApiService = userApiService;
         }
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+        public async Task<IActionResult> OnPostAsync()
         {
             try
             {
@@ -30,9 +30,12 @@ namespace GenericSystem.Web.Pages
                     return Page();
                 }
 
-                string token = string.Empty;
+                UserViewModel resposta = await _userApiService.Authenticate(AuthenticationViewModel.Username, AuthenticationViewModel.Password);
 
-                return RedirectToPage("Home");
+                if (resposta != null)
+                    return RedirectToPage("Home");
+
+                return RedirectToAction("OnGet");
             }
             catch (Exception ex)
             {

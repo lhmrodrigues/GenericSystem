@@ -35,5 +35,6 @@ namespace GenericSystem.Infra.CrossCutting.Util.Interface
         /// URL for Cpnucleo API
         /// </summary>
         string UrlGenericSystemApi { get; }
+
     }
 }

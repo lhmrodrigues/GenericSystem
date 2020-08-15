@@ -97,5 +97,19 @@
             <response code="401">Acesso não autorizado</response>
             <response code="500">Erro no processamento da requisição</response>
         </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.UserController.Auth(System.String,System.String)">
+            <summary>
+            Autentica usuário
+            </summary>
+            <remarks>
+            # Autentica usuário
+            
+            Autentica um usuário na base de dados.
+            </remarks>
+            <param name="id">Id do usuários</param>        
+            <response code="200">Retorna um usuários</response>
+            <response code="404">usuários não encontrado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
     </members>
 </doc>
