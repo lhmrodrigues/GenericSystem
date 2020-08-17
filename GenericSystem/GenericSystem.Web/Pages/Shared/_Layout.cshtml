@@ -9,8 +9,26 @@
     <link href="~/css/material-design-iconic-font.min.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-
+    <header class="header">
+        <div class="navigation-trigger" data-ma-action="aside-open" data-ma-target=".sidebar">
+            <div class="navigation-trigger__inner">
+                @*<i class="navigation-trigger__line"></i>*@
+                @*<i class="navigation-trigger__line"></i>*@
+                @*<i class="navigation-trigger__line"></i>*@
+            </div>
+        </div>
+        <aside class="sidebar sidebar--hidden">
+            <div class="scrollbar-inner">
+                @*<div class="user">
+                    @await Html.PartialAsync("_CardUserPartial")
+                </div>*@
+                <ul class="navigation">
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                </ul>
+            </div>
+        </aside>
     </header>
     <div class="container">
         <main role="main" class="pb-3">

@@ -437,3 +437,4 @@ C:\dev\GenericSystem\GenericSystem\GenericSystem.Web\bin\Debug\netcoreapp3.1\Mic
 C:\dev\GenericSystem\GenericSystem\GenericSystem.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 C:\dev\GenericSystem\GenericSystem\GenericSystem.Web\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 C:\dev\GenericSystem\GenericSystem\GenericSystem.Web\obj\Debug\netcoreapp3.1\Razor\Pages\Home.cshtml.g.cs
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Web\obj\Debug\netcoreapp3.1\Razor\Pages\_Register.cshtml.g.cs

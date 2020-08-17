@@ -1,0 +1,24 @@
+﻿@model GenericSystem.Web.Pages.LoginModel
+
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+            <form asp-page="Login" asp-page-handler="Register" method="post">
+                <div class="col-md-12">Cadastre-se</div>
+                <hr class="col-md-11" />
+                <input type="text" placeholder="Nome" asp-for="UserViewModel.Name" class="form-control col-md-12" />
+                @Html.ValidationMessageFor(m => m.UserViewModel.Name, "", new { @class = "text-danger" })
+                <input type="text" placeholder="CPF" asp-for="UserViewModel.CPF" class="form-control col-md-12" />
+                @Html.ValidationMessageFor(m => m.UserViewModel.CPF, "", new { @class = "text-danger" })
+                <input type="text" placeholder="Username" asp-for="UserViewModel.Username" class="form-control col-md-12" />
+                @Html.ValidationMessageFor(m => m.UserViewModel.Username, "", new { @class = "text-danger" })
+                <input type="password" placeholder="Senha" asp-for="UserViewModel.Password" class="form-control col-md-12" />
+                @Html.ValidationMessageFor(m => m.UserViewModel.Password, "", new { @class = "text-danger" })
+                <input type="date" placeholder="Data de Nascimento" asp-for="UserViewModel.Date" class="form-control col-md-12" />
+                @Html.ValidationMessageFor(m => m.UserViewModel.Date, "", new { @class = "text-danger" })
+                <button type="submit" class="btn btn-info col-md-8 offset-sm-2"><b>Cadastrar</b></button>
+            </form>
+        </div>
+    </div>
+</div>
+

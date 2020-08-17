@@ -17,21 +17,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - CrossCutting", "5.2 -
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Data", "5.1 - Data", "{F11F138E-2BC7-4A41-B95C-8DEBD052972A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSystem.Web", "GenericSystem.Web\GenericSystem.Web.csproj", "{75F12FC0-324D-4B71-9FA5-A4F90F942018}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSystem.Web", "GenericSystem.Web\GenericSystem.Web.csproj", "{75F12FC0-324D-4B71-9FA5-A4F90F942018}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSystem.Api", "GenericSystem.Api\GenericSystem.Api.csproj", "{895DD4EE-D342-43D4-A8E7-085FDABC178E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSystem.Api", "GenericSystem.Api\GenericSystem.Api.csproj", "{895DD4EE-D342-43D4-A8E7-085FDABC178E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSystem.Application", "GenericSystem.Application\GenericSystem.Application.csproj", "{5191719E-83CC-4631-8B40-D4528C1C1EC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSystem.Application", "GenericSystem.Application\GenericSystem.Application.csproj", "{5191719E-83CC-4631-8B40-D4528C1C1EC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSystem.Domain", "GenericSystem.Domain\GenericSystem.Domain.csproj", "{F52EA35C-1325-4C66-A246-D984D412F9C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSystem.Domain", "GenericSystem.Domain\GenericSystem.Domain.csproj", "{F52EA35C-1325-4C66-A246-D984D412F9C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSystem.Infra.Data", "GenericSystem.Infra.Data\GenericSystem.Infra.Data.csproj", "{DED64079-3028-4C0C-942E-2C2C9CF4E2D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSystem.Infra.Data", "GenericSystem.Infra.Data\GenericSystem.Infra.Data.csproj", "{DED64079-3028-4C0C-942E-2C2C9CF4E2D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSystem.Infra.CrossCutting.Communication", "GenericSystem.Infra.CrossCutting.Communication\GenericSystem.Infra.CrossCutting.Communication.csproj", "{9C5E0A8F-3A0E-4AB2-95FC-911D01546BAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSystem.Infra.CrossCutting.Communication", "GenericSystem.Infra.CrossCutting.Communication\GenericSystem.Infra.CrossCutting.Communication.csproj", "{9C5E0A8F-3A0E-4AB2-95FC-911D01546BAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSystem.Infra.CrossCutting.IoC", "GenericSystem.Infra.CrossCutting.IoC\GenericSystem.Infra.CrossCutting.IoC.csproj", "{67387965-4623-4FDA-8783-12D1CEF7726E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSystem.Infra.CrossCutting.IoC", "GenericSystem.Infra.CrossCutting.IoC\GenericSystem.Infra.CrossCutting.IoC.csproj", "{67387965-4623-4FDA-8783-12D1CEF7726E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSystem.Infra.CrossCutting.Util", "GenericSystem.Infra.CrossCutting.Util\GenericSystem.Infra.CrossCutting.Util.csproj", "{775C0D7F-F597-4C49-B02D-530901E8286C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSystem.Infra.CrossCutting.Util", "GenericSystem.Infra.CrossCutting.Util\GenericSystem.Infra.CrossCutting.Util.csproj", "{775C0D7F-F597-4C49-B02D-530901E8286C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Scripts", "6 - Scripts", "{C1868104-E204-4102-ABDA-DA20217D140C}"
+	ProjectSection(SolutionItems) = preProject
+		ScriptCreation.sql = ScriptCreation.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

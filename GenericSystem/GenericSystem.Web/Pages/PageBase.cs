@@ -8,5 +8,7 @@ namespace GenericSystem.Web.Pages
 {
     public class PageBase : PageModel
     {
+        public bool? Success { get; set; }
+        public string Message { get; set; }
     }
 }

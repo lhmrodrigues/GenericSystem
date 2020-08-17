@@ -24,5 +24,10 @@ namespace GenericSystem.Application.Services
             return _mapper.Map<UserViewModel>(_userService.Authenticate(userame, password));
 
         }
+
+        public bool VerifyUsername(string username)
+        {
+            return _mapper.Map<bool>(_userService.VerifyUsername(username));
+        }
     }
 }

@@ -18,12 +18,11 @@ namespace GenericSystem.Infra.CrossCutting.Communication.Services
             _client = new RestClient(systemConfiguration.UrlGenericSystemApi);
         }
 
-        protected async Task<IEnumerable<TViewModel>> GetAsync(string token, string actionRoute, bool getDependencies = false)
+        protected async Task<IEnumerable<TViewModel>> GetAsync(string actionRoute, bool getDependencies = false)
         {
             try
             {
                 RestRequest request = new RestRequest($"api/v1/{actionRoute}", Method.GET);
-                request.AddHeader("Authorization", $"Bearer {token}");
                 request.AddQueryParameter("getDependencies", getDependencies.ToString());
 
                 IRestResponse response = await _client.ExecuteAsync(request);
@@ -48,12 +47,11 @@ namespace GenericSystem.Infra.CrossCutting.Communication.Services
             }
         }
 
-        protected async Task<TViewModel> GetAsync(string token, string actionRoute, Guid id, bool getDependencies)
+        protected async Task<TViewModel> GetAsync(string actionRoute, Guid id, bool getDependencies)
         {
             try
             {
                 RestRequest request = new RestRequest($"api/v1/{actionRoute}/{id}", Method.GET);
-                request.AddHeader("Authorization", $"Bearer {token}");
 
                 IRestResponse response = await _client.ExecuteAsync(request);
 
@@ -77,12 +75,11 @@ namespace GenericSystem.Infra.CrossCutting.Communication.Services
             }
         }
 
-        protected async Task<bool> PostAsync(string token, string actionRoute, TViewModel obj)
+        protected async Task<bool> PostAsync(string actionRoute, TViewModel obj)
         {
             try
             {
                 RestRequest request = new RestRequest($"api/v1/{actionRoute}", Method.POST);
-                request.AddHeader("Authorization", $"Bearer {token}");
                 request.AddJsonBody(JsonConvert.SerializeObject(obj));
 
                 IRestResponse response = await _client.ExecuteAsync(request);
@@ -109,12 +106,11 @@ namespace GenericSystem.Infra.CrossCutting.Communication.Services
             }
         }
 
-        protected async Task<bool> PutAsync(string token, string actionRoute, Guid id, TViewModel obj)
+        protected async Task<bool> PutAsync(string actionRoute, Guid id, TViewModel obj)
         {
             try
             {
                 RestRequest request = new RestRequest($"api/v1/{actionRoute}/{id}", Method.PUT);
-                request.AddHeader("Authorization", $"Bearer {token}");
                 request.AddJsonBody(JsonConvert.SerializeObject(obj));
 
                 IRestResponse response = await _client.ExecuteAsync(request);
@@ -139,12 +135,11 @@ namespace GenericSystem.Infra.CrossCutting.Communication.Services
             }
         }
 
-        protected async Task<bool> DeleteAsync(string token, string actionRoute, Guid id)
+        protected async Task<bool> DeleteAsync(string actionRoute, Guid id)
         {
             try
             {
                 RestRequest request = new RestRequest($"api/v1/{actionRoute}/{id}", Method.DELETE);
-                request.AddHeader("Authorization", $"Bearer {token}");
 
                 IRestResponse response = await _client.ExecuteAsync(request);
 

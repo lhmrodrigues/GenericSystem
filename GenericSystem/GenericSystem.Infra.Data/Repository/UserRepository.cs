@@ -23,5 +23,14 @@ namespace GenericSystem.Infra.Data.Repository
             return obj
                 .FirstOrDefault(x => x.Username == username && x.Password == password);
         }
+
+        public bool VerifyUsername(string username)
+        {
+            IQueryable<User> obj = _dbSet.AsNoTracking();
+
+            var response = obj.FirstOrDefault(x => x.Username == username);
+
+            return response == null ? false : true;
+        }
     }
 }

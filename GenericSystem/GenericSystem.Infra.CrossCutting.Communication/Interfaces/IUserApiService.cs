@@ -8,6 +8,8 @@ namespace GenericSystem.Infra.CrossCutting.Communication.Interfaces
 {
     public interface IUserApiService : ICrudApiService<UserViewModel>
     {
-        Task<UserViewModel> Authenticate(string login, string senha);
+        Task<UserViewModel> Authenticate(string username, string senha);
+        Task<bool> VerifyUsername(string username);
+
     }
 }

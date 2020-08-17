@@ -17,12 +17,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link href="~/lib/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet" />
 
-    <script src="~/lib/iCheck/icheck.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
 </head>
+
 <style>
-    body {
+    body {         
         background-image: url('resources/background.jpg');
         background-size: cover;
         background-position: center center;
@@ -57,25 +57,20 @@
         margin-top: 20px;
     }
 
-    .fb {
-        background-color: #3B5998;
-        color: white;
-        font-size:12px;
-    }
-
-    .google {
-        background-color: #dd4b39;
-        color: white;
-        font-size: 12px;
+    .text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size:50px
     }
 </style>
+
 <body>
     <div class="offset-1 col-10">
         <div class="card">
             <div class="card-body" style="margin-top:60px">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img class="col-md-12" src="~/resources/imageicon.png" />
+                <div class="row" style="margin-top:100px ; margin-bottom:100px">
+                    <div class="col-md-6" >
+                        <img class=" offset-2 col-md-8 centralizer" src="~/resources/logo.png" />
+                        @*<div class="text centralizer col-md-8 offset-2">Casa de Carnes</div>*@
                     </div>
                     <div class="col-md-6 login">
                         <div class="row">
@@ -87,26 +82,51 @@
                                     <div class="titulo">Sign In</div>
                                 </div>
                                 <div class="offset-2 col-md-12">
-                                    <input type="text" placeholder="Username" asp-for="AuthenticationViewModel.Username" class="form-control col-md-8" />
+                                    <input type="text" placeholder="Usuário" asp-for="AuthenticationViewModel.Username" class="form-control col-md-8" />
                                     @Html.ValidationMessageFor(m => m.AuthenticationViewModel.Username, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="offset-2 col-md-12">
-                                    <input type="password" placeholder="Password" asp-for="AuthenticationViewModel.Password" class="form-control col-md-8" />
+                                    <input type="password" placeholder="Senha" asp-for="AuthenticationViewModel.Password" class="form-control col-md-8" />
                                     @Html.ValidationMessageFor(m => m.AuthenticationViewModel.Password, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="col-md-12">
-                                    <button type="submit" class="btn btn-info col-md-6 "><b>Login</b></button>
-                                    <div class="col-md-12" style="margin-top:20px">
-                                        <a href="#" class="fb btn col-md-3">Login with Facebook</a>
-                                        <a href="#" class="google btn col-md-3">Login with Google+</a>
-                                    </div>
+                                    <button type="submit" class="btn btn-danger col-md-6 "><b>Login</b></button>
                                 </div>
                             </form>
+                            <hr class="col-md-7" />
+                            <div class="col-md-12 centralizer">Não tem cadastro ainda? Clique no botão abaixo.</div>
+                            <div class="col-md-12">
+                                <button type="button" name="Register" class="btn btn-outline-dark centralizer" data-toggle="modal" data-target="#modalRegister">Cadastre-se</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    @if (Model.Success != null)
+    {
+        <div class="modal fade" id="modalMessage" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div>@Model.Message</div>
+                        <div class="col-md-12 offset-10">
+                            <button type="button" class="btn btn-link" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog">
+        @await Html.PartialAsync("_Register")
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#modalMessage').modal('show');
+        })
+    </script>
 </body>
 </html>
+

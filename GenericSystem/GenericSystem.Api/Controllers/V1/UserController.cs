@@ -246,6 +246,35 @@ namespace GenericSystem.Api.Controllers.V1
             }
         }
 
+        /// <summary>
+        /// Verifica username
+        /// </summary>
+        /// <remarks>
+        /// # Verifica username
+        /// 
+        /// Verifica um username na base de dados.
+        /// </remarks>
+        /// <param name="id">USername</param>        
+        /// <response code="200">Retorna validação</response>
+        /// <response code="500">Erro no processamento da requisição</response>
+        [HttpGet("VerifyUsername")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<bool> VerifyUsername(string username)
+        {
+            try
+            {
+                bool response = _userAppService.VerifyUsername(username);                
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+
         private bool ObjExists(Guid id)
         {
             return _userAppService.Get(id) != null;

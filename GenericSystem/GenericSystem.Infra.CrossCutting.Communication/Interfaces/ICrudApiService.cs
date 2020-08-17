@@ -7,14 +7,14 @@ namespace GenericSystem.Infra.CrossCutting.Communication.Interfaces
 {
     public interface ICrudApiService<TViewModel>
     {
-        Task<bool> PutAsync(string token, TViewModel obj);
+        Task<bool> PutAsync(TViewModel obj);
 
-        Task<TViewModel> GetAsync(string token, Guid id, bool getDependencies = true);
+        Task<TViewModel> GetAsync(Guid id, bool getDependencies = true);
 
-        Task<IEnumerable<TViewModel>> ListAsync(string token, bool getDependencies = false);
+        Task<IEnumerable<TViewModel>> ListAsync(bool getDependencies = false);
 
-        Task<bool> PostAsync(string token, TViewModel obj);
+        Task<bool> PostAsync(TViewModel obj);
 
-        Task<bool> DeleteAsync(string token, Guid id);
+        Task<bool> DeleteAsync(Guid id);
     }
 }

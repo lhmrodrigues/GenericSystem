@@ -8,5 +8,6 @@ namespace GenericSystem.Domain.Interfaces.Repositories
     public interface IUserRepository : ICrudRepository<User>
     {
         User Authenticate(string username, string password);
+        bool VerifyUsername(string username);
     }
 }

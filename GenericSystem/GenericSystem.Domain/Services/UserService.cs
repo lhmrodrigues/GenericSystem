@@ -19,9 +19,12 @@ namespace GenericSystem.Domain.Services
 
         public User Authenticate(string username, string password)
         {
-            User user = _userRepository.Authenticate(username, password);
+            return _userRepository.Authenticate(username, password);
+        }
 
-            return user;
+        public bool VerifyUsername(string username)
+        {
+            return _userRepository.VerifyUsername(username);
         }
     }
 }

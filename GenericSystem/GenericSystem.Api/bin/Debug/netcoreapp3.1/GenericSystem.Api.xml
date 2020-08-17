@@ -111,5 +111,18 @@
             <response code="404">usuários não encontrado</response>
             <response code="500">Erro no processamento da requisição</response>
         </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.UserController.VerifyUsername(System.String)">
+            <summary>
+            Verifica username
+            </summary>
+            <remarks>
+            # Verifica username
+            
+            Verifica um username na base de dados.
+            </remarks>
+            <param name="id">USername</param>        
+            <response code="200">Retorna validação</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
     </members>
 </doc>

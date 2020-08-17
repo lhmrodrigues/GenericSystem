@@ -19,38 +19,38 @@ namespace GenericSystem.Infra.CrossCutting.Communication.Services
         {
         }
 
-        public async Task<bool> DeleteAsync(string token, Guid id)
+        public async Task<bool> DeleteAsync(Guid id)
         {
-            return await DeleteAsync(token, actionRoute, id);
+            return await DeleteAsync(actionRoute, id);
+        }
+        
+        public async Task<UserViewModel> GetAsync(Guid id, bool getDependencies = true)
+        {
+            return await GetAsync(actionRoute, id, getDependencies);
         }
 
-        public async Task<UserViewModel> GetAsync(string token, Guid id, bool getDependencies = true)
+        public async Task<IEnumerable<UserViewModel>> ListAsync(bool getDependencies = false)
         {
-            return await GetAsync(token, actionRoute, id, getDependencies);
+            return await ListAsync(getDependencies);
         }
 
-        public async Task<IEnumerable<UserViewModel>> ListAsync(string token, bool getDependencies = false)
+        public async Task<bool> PostAsync(UserViewModel obj)
         {
-            return await ListAsync(token, getDependencies);
+            return await PostAsync(actionRoute, obj);
         }
 
-        public async Task<bool> PostAsync(string token, UserViewModel obj)
+        public async Task<bool> PutAsync(UserViewModel obj)
         {
-            return await PostAsync(token, actionRoute, obj);
+            return await PutAsync(actionRoute, obj.Id, obj);
         }
 
-        public async Task<bool> PutAsync(string token, UserViewModel obj)
-        {
-            return await PutAsync(token, actionRoute, obj.Id, obj);
-        }
-
-        public async Task<UserViewModel> Authenticate(string login, string senha)
+        public async Task<UserViewModel> Authenticate(string username, string password)
         {
             try
             {
                 RestRequest request = new RestRequest($"api/v1/{actionRoute}/auth", Method.GET);
-                request.AddQueryParameter("login", login);
-                request.AddQueryParameter("senha", senha);
+                request.AddQueryParameter("username", username);
+                request.AddQueryParameter("password", password);
 
                 IRestResponse response = _client.Execute(request);
 
@@ -71,6 +71,39 @@ namespace GenericSystem.Infra.CrossCutting.Communication.Services
                 }
 
                 return JsonConvert.DeserializeObject<UserViewModel>(response.Content);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<bool> VerifyUsername(string username)
+        {
+            try
+            {
+                RestRequest request = new RestRequest($"api/v1/{actionRoute}/VerifyUsername", Method.GET);
+                request.AddQueryParameter("username", username);
+
+                IRestResponse response = _client.Execute(request);
+
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    if (!string.IsNullOrWhiteSpace(response.Content))
+                    {
+                        throw new Exception(response.Content);
+                    }
+                    else if (response.StatusCode == HttpStatusCode.NotFound)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        throw new Exception("Falha ao se comunicar com a api de dados.");
+                    }
+                }
+
+                return JsonConvert.DeserializeObject<bool>(response.Content);
             }
             catch (Exception)
             {
