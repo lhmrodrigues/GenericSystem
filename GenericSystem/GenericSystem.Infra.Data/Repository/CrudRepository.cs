@@ -51,6 +51,11 @@ namespace GenericSystem.Infra.Data.Repository
             return obj;
         }
 
+        public void Delete(TEntity obj)
+        {
+            _dbSet.Remove(obj);
+        }
+
         public void Post(TEntity obj)
         {
             _dbSet.Add(obj);

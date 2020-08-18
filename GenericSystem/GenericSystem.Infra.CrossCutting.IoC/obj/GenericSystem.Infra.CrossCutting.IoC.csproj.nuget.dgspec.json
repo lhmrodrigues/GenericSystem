@@ -118,7 +118,11 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\dev\\GenericSystem\\GenericSystem\\GenericSystem.Infra.CrossCutting.Util\\GenericSystem.Infra.CrossCutting.Util.csproj": {
+                "projectPath": "C:\\dev\\GenericSystem\\GenericSystem\\GenericSystem.Infra.CrossCutting.Util\\GenericSystem.Infra.CrossCutting.Util.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

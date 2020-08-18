@@ -16,11 +16,19 @@ namespace GenericSystem.Infra.Data.Configuration
         public static void AddInfraDataSetup(this IServiceCollection services)
         {
             services
-                .AddScoped<ICrudRepository<User>, CrudRepository<User>>();
+                .AddScoped<ICrudRepository<User>, CrudRepository<User>>()
+                .AddScoped<ICrudRepository<Category>, CrudRepository<Category>>()
+                .AddScoped<ICrudRepository<Product>, CrudRepository<Product>>()
+                .AddScoped<ICrudRepository<Order>, CrudRepository<Order>>()
+                .AddScoped<ICrudRepository<Request>, CrudRepository<Request>>();
 
 
             services
-                .AddScoped<IUserRepository, UserRepository>();
+                .AddScoped<IUserRepository, UserRepository>()
+                .AddScoped<ICategoryRepository, CategoryRepository>()
+                .AddScoped<IProductRepository, ProductRepository>()
+                .AddScoped<IOrderRepository, OrderRepository>()
+                .AddScoped<IRequestRepository, RequestRepository>();
 
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();

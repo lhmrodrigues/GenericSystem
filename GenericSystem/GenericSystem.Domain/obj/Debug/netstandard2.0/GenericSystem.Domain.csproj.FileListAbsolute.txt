@@ -7,3 +7,6 @@ C:\dev\GenericSystem\GenericSystem\GenericSystem.Domain\bin\Debug\netstandard2.0
 C:\dev\GenericSystem\GenericSystem\GenericSystem.Domain\obj\Debug\netstandard2.0\GenericSystem.Domain.csproj.CoreCompileInputs.cache
 C:\dev\GenericSystem\GenericSystem\GenericSystem.Domain\obj\Debug\netstandard2.0\GenericSystem.Domain.dll
 C:\dev\GenericSystem\GenericSystem\GenericSystem.Domain\obj\Debug\netstandard2.0\GenericSystem.Domain.pdb
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Domain\bin\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Util.dll
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Domain\bin\Debug\netstandard2.0\GenericSystem.Infra.CrossCutting.Util.pdb
+C:\dev\GenericSystem\GenericSystem\GenericSystem.Domain\obj\Debug\netstandard2.0\GenericSystem.Domain.csproj.CopyComplete

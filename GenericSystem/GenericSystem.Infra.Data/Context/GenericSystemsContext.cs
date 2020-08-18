@@ -16,6 +16,10 @@ namespace GenericSystem.Infra.Data.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserMap());
+            modelBuilder.ApplyConfiguration(new CategoryMap());
+            modelBuilder.ApplyConfiguration(new OrderMap());
+            modelBuilder.ApplyConfiguration(new RequestMap());
+            modelBuilder.ApplyConfiguration(new ProductMap());
 
             base.OnModelCreating(modelBuilder);
         }

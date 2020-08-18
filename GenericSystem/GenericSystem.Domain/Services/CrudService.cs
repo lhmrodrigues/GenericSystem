@@ -18,14 +18,14 @@ namespace GenericSystem.Domain.Services
             _unitOfWork = unitOfWork;
         }
 
-        public TEntity Put(TEntity obj, bool getDependencies = false)
+        public TEntity Post(TEntity obj, bool getDependencies = false)
         {
             if (obj.Id == Guid.Empty)
             {
                 obj.Id = Guid.NewGuid();
             }
 
-            _repository.Put(obj);
+            _repository.Post(obj);
 
             if (!_unitOfWork.Commit())
             {
@@ -34,28 +34,33 @@ namespace GenericSystem.Domain.Services
 
             return Get(obj.Id, getDependencies);
         }
+
         public IEnumerable<TEntity> List(bool getDependencies = false)
         {
             return _repository.List(getDependencies).ToList();
         }
+
         public TEntity Get(Guid id, bool getDependencies = true)
         {
             return _repository.Get(id, getDependencies);
         }
+
         public bool Delete(Guid id)
         {
             TEntity obj = _repository.Get(id);
 
-            _repository.Post(obj);
+            _repository.Delete(obj);
 
             return _unitOfWork.Commit();
         }
-        public bool Post(TEntity obj)
+
+        public bool Put(TEntity obj)
         {
-            _repository.Post(obj);
+            _repository.Put(obj);
 
             return _unitOfWork.Commit();
         }
+
         public Guid GetGuid()
         {
             return Guid.NewGuid();

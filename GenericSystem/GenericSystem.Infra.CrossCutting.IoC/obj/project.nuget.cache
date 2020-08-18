@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "L6UU1ba4JrrIQQ/u308XSk3pSaBdlRaZhAORx9eryolkRu1e4LkLayVTFobyHOZyOUT1y9NqTuB8TdN/MTQ/pw==",
+  "dgSpecHash": "IBptHZg5cVkeQnYaeh8BtKL3zJZOxdPypA2vd2k4fsc9ZV2ptWPXTauKSMdrQIVOnNaSwz/+1BCBPo4lzo3SlQ==",
   "success": true,
   "projectFilePath": "C:\\dev\\GenericSystem\\GenericSystem\\GenericSystem.Infra.CrossCutting.IoC\\GenericSystem.Infra.CrossCutting.IoC.csproj",
   "expectedPackageFiles": [

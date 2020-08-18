@@ -2413,6 +2413,7 @@
       },
       "GenericSystem.Domain/1.0.0": {
         "dependencies": {
+          "GenericSystem.Infra.CrossCutting.Util": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.7"
         },

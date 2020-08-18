@@ -14,5 +14,7 @@ namespace GenericSystem.Domain.Interfaces.Repositories
         IQueryable<TEntity> List(bool getDependencies = false);
 
         void Post(TEntity obj);
+
+        void Delete(TEntity obj);
     }
 }

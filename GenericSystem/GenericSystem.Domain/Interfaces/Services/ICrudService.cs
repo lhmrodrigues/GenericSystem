@@ -6,13 +6,13 @@ namespace GenericSystem.Domain.Interfaces.Services
 {
     public interface ICrudService<TEntity>
     {
-        TEntity Put(TEntity obj, bool getDependencies = false);
+        TEntity Post(TEntity obj, bool getDependencies = false);
 
         TEntity Get(Guid id, bool getDependencies = true);
 
         IEnumerable<TEntity> List(bool getDependencies = false);
 
-        bool Post(TEntity obj);
+        bool Put(TEntity obj);
 
         bool Delete(Guid id);
 

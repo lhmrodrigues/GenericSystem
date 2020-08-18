@@ -15,10 +15,19 @@ namespace GenericSystem.Application.Configuration
         public static void AddApplicationSetup(this IServiceCollection services)
         {
             services
-                .AddScoped<ICrudAppService<UserViewModel>, CrudAppService<User, UserViewModel>>();
+                .AddScoped<ICrudAppService<UserViewModel>, CrudAppService<User, UserViewModel>>()
+                .AddScoped<ICrudAppService<CategoryViewModel>, CrudAppService<User, CategoryViewModel>>()
+                .AddScoped<ICrudAppService<OrderViewModel>, CrudAppService<Order, OrderViewModel>>()
+                .AddScoped<ICrudAppService<RequestViewModel>, CrudAppService<Request, RequestViewModel>>()
+                .AddScoped<ICrudAppService<ProductViewModel>, CrudAppService<Product, ProductViewModel>>();
+
 
             services
-               .AddScoped<IUserAppService, UserAppService>();
+               .AddScoped<IUserAppService, UserAppService>()
+               .AddScoped<ICategoryAppService, CategoryAppService>()
+               .AddScoped<IOrderAppService, OrderAppService>()
+               .AddScoped<IRequestAppService, RequestAppService>()
+               .AddScoped<IProductAppService, ProductAppService>();
 
             services.AddAutoMapper();
         }

@@ -4,6 +4,370 @@
         <name>GenericSystem.Api</name>
     </assembly>
     <members>
+        <member name="M:GenericSystem.Api.Controllers.V1.CategoryController.Get">
+            <summary>
+            Listar Categorias
+            </summary>
+            <remarks>
+            # Listar Categorias
+            
+            Lista Categorias da base de dados.
+            </remarks>
+            <response code="200">Retorna uma lista de Categorias</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.CategoryController.Get(System.Guid)">
+            <summary>
+            Consultar Categorias
+            </summary>
+            <remarks>
+            # Consultar Categorias
+            
+            Consulta uma Categoria na base de dados.
+            </remarks>
+            <param name="id">Id da Categoria</param>        
+            <response code="200">Retorna uma Categorias</response>
+            <response code="404">Categoria não encontrado</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.CategoryController.Post(GenericSystem.Infra.CrossCutting.Util.ViewModels.CategoryViewModel)">
+             <summary>
+             Incluir categoria
+             </summary>
+             <remarks>
+             # Incluir categoria
+             
+             Inclui uma categoria na base de dados.
+             
+             # Sample request:
+            
+                 POST /usuários
+                 {
+                    "Nome": "nome da categoria",
+                   
+                 }
+             </remarks>
+             <param name="obj">categoria</param>        
+             <response code="201">categoria cadastrado com sucesso</response>
+             <response code="400">Objetos não preenchidos corretamente</response>
+             <response code="409">Guid informado já consta na base de dados</response>
+             <response code="401">Acesso não autorizado</response>
+             <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.CategoryController.Put(System.Guid,GenericSystem.Infra.CrossCutting.Util.ViewModels.CategoryViewModel)">
+             <summary>
+             Alterar categoria
+             </summary>
+             <remarks>
+             # Alterar categoria
+             
+             Altera uma categoria na base de dados.
+             
+             # Sample request:
+            
+                 PUT /usuários
+                 {
+                    "Nome": "nome da categoria",
+                   
+                 }
+             </remarks>
+             <param name="id">Id da categoria</param>        
+             <param name="obj">categoria</param>        
+             <response code="204">categoria alterado com sucesso</response>
+             <response code="400">ID informado não é válido</response>
+             <response code="401">Acesso não autorizado</response>
+             <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.CategoryController.Delete(System.Guid)">
+            <summary>
+            Remover categoria
+            </summary>
+            <remarks>
+            # Remover categoria
+            
+            Remove uma categoria da base de dados.
+            </remarks>
+            <param name="id">Id da categoria</param>        
+            <response code="204">categoria removido com sucesso</response>
+            <response code="404">categoria não encontrado</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.OrderController.Get">
+            <summary>
+            Listar Pedidos
+            </summary>
+            <remarks>
+            # Listar Pedidos
+            
+            Lista Pedidos da base de dados.
+            </remarks>
+            <response code="200">Retorna uma lista de Pedidos</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.OrderController.Get(System.Guid)">
+            <summary>
+            Consultar Pedidos
+            </summary>
+            <remarks>
+            # Consultar Pedidos
+            
+            Consulta um Pedido na base de dados.
+            </remarks>
+            <param name="id">Id do Pedido</param>        
+            <response code="200">Retorna um Pedido</response>
+            <response code="404">Pedido não encontrado</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.OrderController.Post(GenericSystem.Infra.CrossCutting.Util.ViewModels.OrderViewModel)">
+             <summary>
+             Incluir Pedido
+             </summary>
+             <remarks>
+             # Incluir Pedido
+             
+             Inclui um Pedido na base de dados.
+             
+             # Sample request:
+            
+                 POST /usuários
+                 {
+                    "Nome": "nome da categoria",
+                   
+                 }
+             </remarks>
+             <param name="obj">Pedido</param>        
+             <response code="201">Pedido cadastrado com sucesso</response>
+             <response code="400">Objetos não preenchidos corretamente</response>
+             <response code="409">Guid informado já consta na base de dados</response>
+             <response code="401">Acesso não autorizado</response>
+             <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.OrderController.Put(System.Guid,GenericSystem.Infra.CrossCutting.Util.ViewModels.OrderViewModel)">
+             <summary>
+             Alterar Pedido
+             </summary>
+             <remarks>
+             # Alterar Pedido
+             
+             Altera um Pedido na base de dados.
+             
+             # Sample request:
+            
+                 PUT /usuários
+                 {
+                    "Nome": "nome da categoria",
+                   
+                 }
+             </remarks>
+             <param name="id">Id do Pedido</param>        
+             <param name="obj">Pedido</param>        
+             <response code="204">Pedido alterado com sucesso</response>
+             <response code="400">ID informado não é válido</response>
+             <response code="401">Acesso não autorizado</response>
+             <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.OrderController.Delete(System.Guid)">
+            <summary>
+            Remover Pedido
+            </summary>
+            <remarks>
+            # Remover Pedido
+            
+            Remove um Pedido da base de dados.
+            </remarks>
+            <param name="id">Id do Pedido</param>        
+            <response code="204">Pedido removido com sucesso</response>
+            <response code="404">Pedido não encontrado</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.ProductController.Get">
+            <summary>
+            Listar Produtos
+            </summary>
+            <remarks>
+            # Listar Produto
+            
+            Lista Pedidos da base de dados.
+            </remarks>
+            <response code="200">Retorna uma lista de Produto</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.ProductController.Get(System.Guid)">
+            <summary>
+            Consultar Produto
+            </summary>
+            <remarks>
+            # Consultar Produto
+            
+            Consulta um Pedido na base de dados.
+            </remarks>
+            <param name="id">Id do Produto</param>        
+            <response code="200">Retorna um Produto</response>
+            <response code="404">Produto não encontrado</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.ProductController.Post(GenericSystem.Infra.CrossCutting.Util.ViewModels.ProductViewModel)">
+             <summary>
+             Incluir Produto
+             </summary>
+             <remarks>
+             # Incluir Produto
+             
+             Inclui um Produto na base de dados.
+             
+             # Sample request:
+            
+                 POST /usuários
+                 {
+                    "Nome": "nome da categoria",
+                   
+                 }
+             </remarks>
+             <param name="obj">Produto</param>        
+             <response code="201">Produto cadastrado com sucesso</response>
+             <response code="400">Objetos não preenchidos corretamente</response>
+             <response code="409">Guid informado já consta na base de dados</response>
+             <response code="401">Acesso não autorizado</response>
+             <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.ProductController.Put(System.Guid,GenericSystem.Infra.CrossCutting.Util.ViewModels.ProductViewModel)">
+             <summary>
+             Alterar Produto
+             </summary>
+             <remarks>
+             # Alterar Produto
+             
+             Altera um Produto na base de dados.
+             
+             # Sample request:
+            
+                 PUT /usuários
+                 {
+                    "Nome": "nome da categoria",
+                   
+                 }
+             </remarks>
+             <param name="id">Id do Produto</param>        
+             <param name="obj">Produto</param>        
+             <response code="204">Produto alterado com sucesso</response>
+             <response code="400">ID informado não é válido</response>
+             <response code="401">Acesso não autorizado</response>
+             <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.ProductController.Delete(System.Guid)">
+            <summary>
+            Remover Produto
+            </summary>
+            <remarks>
+            # Remover Produto
+            
+            Remove um Produto da base de dados.
+            </remarks>
+            <param name="id">Id do Produto</param>        
+            <response code="204">Produto removido com sucesso</response>
+            <response code="404">Produto não encontrado</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.RequestController.Get">
+            <summary>
+            Listar Pedidos
+            </summary>
+            <remarks>
+            # Listar Pedidos
+            
+            Lista Pedidos da base de dados.
+            </remarks>
+            <response code="200">Retorna uma lista de Pedidos</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.RequestController.Get(System.Guid)">
+            <summary>
+            Consultar Pedidos
+            </summary>
+            <remarks>
+            # Consultar Pedidos
+            
+            Consulta um Pedido na base de dados.
+            </remarks>
+            <param name="id">Id do Pedido</param>        
+            <response code="200">Retorna um Pedido</response>
+            <response code="404">Pedido não encontrado</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.RequestController.Post(GenericSystem.Infra.CrossCutting.Util.ViewModels.RequestViewModel)">
+             <summary>
+             Incluir Pedido
+             </summary>
+             <remarks>
+             # Incluir Pedido
+             
+             Inclui um Pedido na base de dados.
+             
+             # Sample request:
+            
+                 POST /usuários
+                 {
+                    "Nome": "nome da categoria",
+                   
+                 }
+             </remarks>
+             <param name="obj">Pedido</param>        
+             <response code="201">Pedido cadastrado com sucesso</response>
+             <response code="400">Objetos não preenchidos corretamente</response>
+             <response code="409">Guid informado já consta na base de dados</response>
+             <response code="401">Acesso não autorizado</response>
+             <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.RequestController.Put(System.Guid,GenericSystem.Infra.CrossCutting.Util.ViewModels.RequestViewModel)">
+             <summary>
+             Alterar Pedido
+             </summary>
+             <remarks>
+             # Alterar Pedido
+             
+             Altera um Pedido na base de dados.
+             
+             # Sample request:
+            
+                 PUT /usuários
+                 {
+                    "Nome": "nome da categoria",
+                   
+                 }
+             </remarks>
+             <param name="id">Id do Pedido</param>        
+             <param name="obj">Pedido</param>        
+             <response code="204">Pedido alterado com sucesso</response>
+             <response code="400">ID informado não é válido</response>
+             <response code="401">Acesso não autorizado</response>
+             <response code="500">Erro no processamento da requisição</response>
+        </member>
+        <member name="M:GenericSystem.Api.Controllers.V1.RequestController.Delete(System.Guid)">
+            <summary>
+            Remover Pedido
+            </summary>
+            <remarks>
+            # Remover Pedido
+            
+            Remove um Pedido da base de dados.
+            </remarks>
+            <param name="id">Id do Pedido</param>        
+            <response code="204">Pedido removido com sucesso</response>
+            <response code="404">Pedido não encontrado</response>
+            <response code="401">Acesso não autorizado</response>
+            <response code="500">Erro no processamento da requisição</response>
+        </member>
         <member name="M:GenericSystem.Api.Controllers.V1.UserController.Get">
             <summary>
             Listar Usuarios

@@ -36,14 +36,14 @@ namespace GenericSystem.Application.Services
 
         }
 
-        public bool Post(TViewModel obj)
+        public bool Put(TViewModel obj)
         {
-            return _service.Post(_mapper.Map<TEntity>(obj));
+            return _service.Put(_mapper.Map<TEntity>(obj));
         }
 
-        public TViewModel Put(TViewModel obj, bool getDependencies = false)
+        public TViewModel Post(TViewModel obj, bool getDependencies = false)
         {
-            return _mapper.Map<TViewModel>(_service.Put(_mapper.Map<TEntity>(obj), getDependencies));
+            return _mapper.Map<TViewModel>(_service.Post(_mapper.Map<TEntity>(obj), getDependencies));
 
         }
     }
